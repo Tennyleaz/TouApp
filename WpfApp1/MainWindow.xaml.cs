@@ -48,11 +48,15 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            clientPacks = new clientPack[4];
-            clientPacks[0] = new clientPack(MatchList0, MatchClearButton0, LogList0, InputButton0, InputBox0, "A");
-            clientPacks[1] = new clientPack(MatchList1, MatchClearButton1, LogList1, InputButton1, InputBox1, "B");
-            clientPacks[2] = new clientPack(MatchList2, MatchClearButton2, LogList2, InputButton2, InputBox2, "C");
-            clientPacks[3] = new clientPack(MatchList3, MatchClearButton3, LogList3, InputButton3, InputBox3, "D");
+            myControl1.ServerName = "A";
+            myControl2.ServerName = "B";
+            myControl3.ServerName = "C";
+            myControl4.ServerName = "D";
+            //clientPacks = new clientPack[4];
+            //clientPacks[0] = new clientPack(MatchList0, MatchClearButton0, LogList0, InputButton0, InputBox0, "A");
+            //clientPacks[1] = new clientPack(MatchList1, MatchClearButton1, LogList1, InputButton1, InputBox1, "B");
+            //clientPacks[2] = new clientPack(MatchList2, MatchClearButton2, LogList2, InputButton2, InputBox2, "C");
+            //clientPacks[3] = new clientPack(MatchList3, MatchClearButton3, LogList3, InputButton3, InputBox3, "D");
         }
 
         private void MatchClearButton0_Click(object sender, RoutedEventArgs e)
