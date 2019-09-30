@@ -73,7 +73,10 @@ namespace WpfApp1
         {
             MyModel winItem = TheCollection.LastOrDefault(x => x.TheText == input);
             if (winItem != null)
+            {
                 winItem.TextColorBrush = Brushes.Red;
+                MatchList.Items.Add(ServerName + " " + input);
+            }
         }
 
         private void MyInputboxKeyDown(KeyEventArgs e)
