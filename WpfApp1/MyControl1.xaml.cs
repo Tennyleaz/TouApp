@@ -71,16 +71,9 @@ namespace WpfApp1
 
         private void CheckWin(string input)
         {
-            for (int i = TheCollection.Count - 1; i >= 0; i--)
-            {
-                if (TheCollection[i].TheText == input)
-                {
-                    MatchList.Items.Add(ServerName + " " + input);
-                    // make color red
-                    TheCollection[i].TextColorBrush = Brushes.Red;
-                    break;
-                }
-            }
+            MyModel winItem = TheCollection.LastOrDefault(x => x.TheText == input);
+            if (winItem != null)
+                winItem.TextColorBrush = Brushes.Red;
         }
 
         private void MyInputboxKeyDown(KeyEventArgs e)
